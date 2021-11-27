@@ -27,7 +27,7 @@ node {
             if (isUnix()) {
                 rc = sh returnStatus: true, script: "sfdx force:auth:jwt:grant --clientid ${CONNECTED_APP_CONSUMER_KEY} --username ${HUB_ORG} --jwtkeyfile ${jwt_key_file} -d --instanceurl ${SFDC_HOST}"
             } else {
-                rc = bat returnStatus: true, script: "sfdx force:auth:jwt:grant --clientid ${CONNECTED_APP_CONSUMER_KEY} --username ${HUB_ORG} --jwtkeyfile \"${jwt_key_file}\" -d --instanceurl ${SFDC_HOST}"
+                rc = bat returnStatus: true, script: sfdx force:auth:jwt:grant --clientid 3MVG9p1Q1BCe9GmDHCOj2DafRKeX_vBCGa6Yc3dCkzA8XGhxMh1Y5RSGXTONer9FTxVP9IlrOSEM.OLMg12th --username inbox.outbox@inboxoutbox10.com --jwtkeyfile C:\Users\nivi\Salesforce\ReleaseManagement\JWT\server.key -d --instanceurl https://login.salesforce.com/
             }
             
             if (rc != 0) {
